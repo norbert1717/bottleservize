@@ -1,0 +1,79 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    padding: 0 2rem;
+    background: var(--card-bg);
+    color: var(--main-bg);
+    min-height: 60px;
+    max-height: 100px;
+    height: 100px;
+    box-shadow: 0 1px 8px rgba(50, 50, 50, 0.10);
+    position: relative;
+    z-index: 20;
+    border-bottom: 1px solid var(--border);
+}
+
+.site-logo {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 0 1.5rem 0 0;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1.2rem;
+    flex-grow: 1;
+    justify-content: flex-end;
+    background: transparent;
+}
+
+.language-button {
+    font-weight: bold;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid var(--main-bg);
+    color: var(--main-bg);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    font-size: 1.05rem;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.language-button:hover,
+.language-button.active {
+    background: var(--accent);
+    color: var(--accent-text);
+    box-shadow: 0 0 0 3px rgba(98, 176, 184, 0.4);
+}
+
+.header a,
+.header .nav-link {
+    color: var(--main-bg);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.header a:hover,
+.header .nav-link:hover {
+    color: var(--accent-dark);
+}
+
+/* Instagram ikon maradhat karakteres, csak ne lógjon ki színben */
+.instagram-link {
+    display: flex;
+    align-items: center;
+    transition: transform 0.15s;
+    margin-left: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.instagram-link:hover svg {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px rgba(225, 48, 108, 0.4));
+}

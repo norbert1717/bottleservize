@@ -1,0 +1,48 @@
+{
+    "about": {
+        "title": "Rólunk",
+        "description": "A Bottle ServiZe küldetése, hogy a „szemétnek” hitt üvegekben új értéket, új történetet fedezzen fel.\nIkonikus italos palackokat mentünk meg a visszaváltás és a feledés közül.\nHiszünk a tárgyak múltjában: egy barátokkal töltött este, egy ünnep vagy egy bár hangulata mind ott él a szilánkokban.\nEzt az emléket tesszük tartóssá – professzionális kivitelben, tiszta vonalakkal, időtálló anyagokkal.\nMinden darab egyedi és egy különleges történetet hordoz: a törésből esztétika, az egyszer használatosból maradandó design lesz."
+    },
+    "product": {
+        "title": "Termékeink",
+        "productBlanco": "Blanco leírás",
+        "productDictator": "Ez a Dictator termék csodálatos megjelenésű és kiváló minőségű, minden igényt kielégít.",
+        "productAzulLink": "További információ és vásárlás itt",
+        "productDictatorLink": "További információ és vásárlás itt",
+        "productBlancoLink": "További információ és vásárlás itt"
+    },
+    "header": {
+        "about": "Rólunk",
+        "product": "Termékeink",
+        "contact": "Elérhetőségek"
+    },
+    "home": {
+        "title": "Főoldal",
+        "shopNow": "Vásároljon itt!"
+    },
+    "contact": {
+        "contactTitle": "Kapcsolat",
+        "emailLabel": "Email",
+        "emailValue": "miklosnorbert17@gmail.com",
+        "questionTitle": "Kérdésed van?",
+        "namePlaceholder": "Név",
+        "emailPlaceholder": "Email",
+        "messagePlaceholder": "Üzenet",
+        "sendButton": "Küldés",
+        "faqTitle": "Gyakran Ismételt Kérdések",
+        "faqs": [
+            {
+                "question": "Hogyan rendelhetek?",
+                "answer": "Válaszd ki a terméket, kattints a 'Vásároljon itt!' gombra, és kövesd a Meska webshop lépéseit."
+            },
+            {
+                "question": "Hogyan kapok visszaigazolást?",
+                "answer": "Minden rendelésről automatikusan emailt kapsz a megadott címre."
+            },
+            {
+                "question": "Módosíthatom a rendelésem?",
+                "answer": "Írj nekünk emailt vagy töltsd ki az űrlapot, segítünk a módosításban."
+            }
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "about": {
+        "title": "About Us",
+        "description": "The mission of Bottle ServiZe is to discover new value and new stories in bottles once thought of as 'trash'.\nWe rescue iconic beverage bottles from redemption and oblivion.\nWe believe in the past of objects: an evening spent with friends, a celebration, or the atmosphere of a bar—all live on in the shards.\nWe make this memory lasting – with professional craftsmanship, clean lines, and timeless materials.\nEach piece is unique and carries a special story: beauty from breakage, lasting design from disposable items."
+    },
+    "product": {
+        "title": "Product",
+        "productBlanco": "Blanco description",
+        "productDictator": "This Dictator product has an amazing look and excellent quality, satisfying all needs.",
+        "productAzulLink": "More information and purchase here",
+        "productDictatorLink": "More information and purchase here",
+        "productBlancoLink": "More information and purchase here"
+    },
+    "header": {
+        "about": "About Us",
+        "product": "Product",
+        "contact": "Contact"
+    },
+    "home": {
+        "title": "Home",
+        "shopNow": "Shop now!"
+    },
+    "backToHome": {
+        "label": "Back to Home"
+    },
+    "contact": {
+        "contactTitle": "Contact",
+        "emailLabel": "Email",
+        "emailValue": "miklosnorbert17@gmail.com",
+        "questionTitle": "Any questions?",
+        "namePlaceholder": "Name",
+        "emailPlaceholder": "Email",
+        "messagePlaceholder": "Message",
+        "sendButton": "Send",
+        "faqTitle": "Frequently Asked Questions",
+        "faqs": [
+            {
+                "question": "How can I order?",
+                "answer": "Select a product, click the 'Shop now!' button, and follow the steps in the Meska webshop."
+            },
+            {
+                "question": "How will I get confirmation?",
+                "answer": "You will automatically receive an email for every order to your provided address."
+            },
+            {
+                "question": "Can I modify my order?",
+                "answer": "Email us or fill out the form; we will help with modifications."
+            }
+        ]
+    }
+}
