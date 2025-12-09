@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1.2rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
     background: var(--card-bg);
     color: var(--main-bg);
     min-height: 60px;
@@ -15,14 +15,27 @@
     border-bottom: 1px solid var(--border);
 }
 
+.nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: var(--main-bg);
+}
+
+.site-logo-wrapper {
+    flex: 1;
+    text-align: center;
+}
+
 .site-logo {
     width: 50px;
     height: auto;
     display: block;
-    margin: 0 1.5rem 0 0;
 }
 
-.nav-buttons {
+.nav-menu {
     display: flex;
     gap: 1.2rem;
     flex-grow: 1;
@@ -30,40 +43,27 @@
     background: transparent;
 }
 
-.language-button {
+.nav-menu button {
     font-weight: bold;
     cursor: pointer;
-    background: transparent;
-    border: 2px solid var(--main-bg);
-    color: var(--main-bg);
+    background: var(--accent);
+    /* home.css-ben lévő gomb háttérszín */
+    color: var(--accent-text);
+    /* home.css-ben lévő gomb szövegszín */
+    border: none;
     border-radius: 999px;
-    padding: 0.3rem 0.8rem;
-    font-size: 1.05rem;
+    padding: 0.55em 1.1em;
+    font-size: 1.1rem;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
-.language-button:hover,
-.language-button.active {
-    background: var(--accent);
+.nav-menu button:hover {
+    background: var(--accent-dark);
+    /* hover háttérszín */
     color: var(--accent-text);
-    box-shadow: 0 0 0 3px rgba(98, 176, 184, 0.4);
+    box-shadow: 0 0 0 3px rgba(98, 176, 184, 0.2);
 }
 
-.header a,
-.header .nav-link {
-    color: var(--main-bg);
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.2s;
-}
-
-.header a:hover,
-.header .nav-link:hover {
-    color: var(--accent-dark);
-}
-
-/* Instagram ikon maradhat karakteres, csak ne lógjon ki színben */
 .instagram-link {
     display: flex;
     align-items: center;
@@ -76,4 +76,66 @@
 .instagram-link:hover svg {
     transform: scale(1.15);
     filter: drop-shadow(0 0 8px rgba(225, 48, 108, 0.4));
+}
+
+/* Mobil nézet */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+        order: 1;
+    }
+
+    .site-logo-wrapper {
+        order: 2;
+        flex: 0;
+        text-align: center;
+    }
+
+    .site-logo {
+        margin: 0 auto;
+    }
+
+    .instagram-link {
+        order: 3;
+        margin-left: 0;
+    }
+
+    LanguageSwitcher {
+        order: 4;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--card-bg);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu button {
+        display: block;
+        padding: 0.8rem 1rem;
+        width: 100%;
+        border-bottom: 1px solid var(--border);
+        background: var(--accent);
+        color: var(--accent-text);
+        border-radius: 999px;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+
+    .nav-menu button:hover {
+        background: var(--accent-dark);
+        color: var(--accent-text);
+        box-shadow: 0 0 0 3px rgba(98, 176, 184, 0.2);
+    }
 }

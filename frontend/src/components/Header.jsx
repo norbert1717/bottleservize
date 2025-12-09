@@ -4,10 +4,12 @@ import { useTranslation } from 'react-i18next';
 import logo1 from '../assets/images/logo1.jpg';
 import { FaInstagram } from 'react-icons/fa';
 import './styles/Header.css';
+import { useState } from 'react';
 
 function Header() {
     const navigate = useNavigate();
     const { t } = useTranslation();
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <header className="header">
@@ -23,11 +25,14 @@ function Header() {
             >
                 <FaInstagram size={28} color="#E1306C" />
             </a>
-            <div className="nav-buttons">
-                <button onClick={() => navigate('/about')}>{t('header.about')}</button>
-                <button onClick={() => navigate('/product')}>{t('header.product')}</button>
-                <button onClick={() => navigate('/contact')}>{t('header.contact')}</button>
+            <div className="nav-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+                ☰
             </div>
+            <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+                <button onClick={() => { navigate('/about'); setMenuOpen(false); }}>{t('header.about')}</button>
+                <button onClick={() => { navigate('/product'); setMenuOpen(false); }}>{t('header.product')}</button>
+                <button onClick={() => { navigate('/contact'); setMenuOpen(false); }}>{t('header.contact')}</button>
+            </nav>
             <LanguageSwitcher />
         </header>
     );
