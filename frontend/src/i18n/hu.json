@@ -5,11 +5,13 @@
     },
     "product": {
         "title": "Termékeink",
-        "productBlanco": "Blanco leírás",
-        "productDictator": "Ez a Dictator termék csodálatos megjelenésű és kiváló minőségű, minden igényt kielégít.",
         "productAzulLink": "További információ és vásárlás itt",
         "productDictatorLink": "További információ és vásárlás itt",
-        "productBlancoLink": "További információ és vásárlás itt"
+        "productBlancoLink": "További információ és vásárlás itt",
+        "productBelugaPearLink": "További információ és vásárlás itt",
+        "productAbuleoLink": "További információ és vásárlás itt",
+        "productUnicumOrangeLink": "További információ és vásárlás itt",
+        "productTequilaBlancoLink": "További információ és vásárlás itt"
     },
     "header": {
         "about": "Rólunk",

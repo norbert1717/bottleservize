@@ -5,11 +5,13 @@
     },
     "product": {
         "title": "Product",
-        "productBlanco": "Blanco description",
-        "productDictator": "This Dictator product has an amazing look and excellent quality, satisfying all needs.",
         "productAzulLink": "More information and purchase here",
         "productDictatorLink": "More information and purchase here",
-        "productBlancoLink": "More information and purchase here"
+        "productBlancoLink": "More information and purchase here",
+        "productBelugaPearLink": "More information and purchase here",
+        "productAbuleoLink": "More information and purchase here",
+        "productUnicumOrangeLink": "More information and purchase here",
+        "productTequilaBlancoLink": "More information and purchase here"
     },
     "header": {
         "about": "About Us",
