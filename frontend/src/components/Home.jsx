@@ -1,5 +1,6 @@
 import { useRef, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import promoVideo from '../assets/videos/promoVideo.mp4';
 import { products } from '../data/products';
 import './styles/Home.css';
@@ -14,6 +15,7 @@ function getRandomProducts(allProducts, count) {
 
 function Home() {
     const { t } = useTranslation();
+    const navigate = useNavigate();
     const videoRef = useRef(null);
     const [started, setStarted] = useState(false);
 
@@ -22,6 +24,10 @@ function Home() {
             videoRef.current.play();
             setStarted(true);
         }
+    };
+
+    const handleShopClick = () => {
+        navigate('/product');
     };
 
     const suggestedProducts = useMemo(
@@ -70,6 +76,9 @@ function Home() {
                     controls={false}
                     preload="auto"
                 />
+                <button className="home-shop-button" onClick={handleShopClick}>
+                    {t('home.shopNow')}
+                </button>
             </div>
 
             <div className="home-side-products home-side-right">
@@ -100,3 +109,4 @@ function Home() {
 }
 
 export default Home;
+

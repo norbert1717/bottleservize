@@ -4,71 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     display: grid;
     grid-template-columns: 1fr minmax(0, 1200px) 1fr;
     align-items: center;
     justify-items: center;
     background: var(--main-bg);
+    padding-top: 16px;
 }
 
-/* Középső videós konténer */
-.home-content {
-    width: calc(100vw - 100px);
-    max-width: 1200px;
-    aspect-ratio: 16/9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(20, 20, 20, 0.22);
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    background: #000;
-}
-
-.home-bg-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 16px;
-}
-
-/* Opcionális cím/hint */
-.home-title {
-    position: absolute;
-    top: 4%;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    color: var(--main-text);
-    margin: 0;
-    padding: 0;
-    font-size: 2.4rem;
-    text-shadow: 0 2px 20px rgba(60, 60, 60, 0.34);
-    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-    text-align: center;
-    pointer-events: none;
-}
-
-.home-hint {
-    position: absolute;
-    bottom: 4%;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    color: var(--secondary-text);
-    padding: 0.6em 1em;
-    border-radius: 8px;
-    font-size: 1.05rem;
-    text-align: center;
-    pointer-events: none;
-}
-
-/* Oldalsó termékblokkok (bal/jobb) */
 .home-side-products {
     display: flex;
     flex-direction: column;
@@ -99,9 +42,7 @@
     flex-direction: column;
     gap: 6px;
     align-items: center;
-    /* VÍZszintesen középre */
     text-align: center;
-    /* Szöveg középre */
 }
 
 .side-product-name {
@@ -128,4 +69,121 @@
     background: var(--accent-dark);
     box-shadow: 0 0 0 3px rgba(98, 176, 184, 0.4);
     transform: translateY(-1px);
+}
+
+.home-content {
+    width: calc(100vw - 100px);
+    max-width: 1200px;
+    aspect-ratio: 16/9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(20, 20, 20, 0.22);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.home-bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+.home-shop-button {
+    position: absolute;
+    bottom: 33%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.8em 1.5em;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-text);
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    box-shadow: 0 0 0 3px rgba(98, 176, 184, 0.4);
+    border: none;
+    cursor: pointer;
+}
+
+.home-shop-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+/* Mobil nézet */
+@media (max-width: 768px) {
+    .home-root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 16px;
+        padding-bottom: 0;
+    }
+
+    .home-side-products,
+    .home-side-left,
+    .home-side-right {
+        display: none;
+    }
+
+    .home-content {
+        width: 100vw;
+        height: 100vh;
+        max-width: none;
+        aspect-ratio: unset;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .home-bg-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .home-shop-button {
+        position: absolute;
+        bottom: 20%;
+        /* lejjebb a videón */
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.6em 1.2em;
+        /* kisebb */
+        border-radius: 8px;
+        /* téglalap */
+        background: transparent;
+        /* átlátszó */
+        color: white;
+        font-size: 0.95rem;
+        /* kisebb */
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.9);
+        /* fehér border */
+        transition: all 0.2s ease;
+        backdrop-filter: blur(10px);
+        box-shadow: none;
+    }
+
+    .home-shop-button:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 1);
+        transform: translateX(-50%) translateY(-2px);
+    }
 }
