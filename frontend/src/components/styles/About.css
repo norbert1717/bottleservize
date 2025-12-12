@@ -19,9 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
     width: 100%;
-    max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -59,10 +57,5 @@
 
     .about-text {
         font-size: 1rem;
-    }
-
-    .about-overlay {
-        max-width: 100%;
-        padding: 1rem;
     }
 }

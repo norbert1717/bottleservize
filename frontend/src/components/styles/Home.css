@@ -112,6 +112,7 @@
     box-shadow: 0 0 0 3px rgba(98, 176, 184, 0.4);
     border: none;
     cursor: pointer;
+    display: none
 }
 
 .home-shop-button:hover {
@@ -179,6 +180,7 @@
         transition: all 0.2s ease;
         backdrop-filter: blur(10px);
         box-shadow: none;
+        display: block;
     }
 
     .home-shop-button:hover {
