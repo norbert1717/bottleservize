@@ -12,10 +12,10 @@ function Contact() {
         e.preventDefault();
 
         emailjs.sendForm(
-            'YOUR_SERVICE_ID',   // EmailJS Service ID
+            'service_3kvvun5',   // EmailJS Service ID
             'template_gvmxi3m',  // EmailJS Template ID (amit a képernyőképen látsz)
             e.target,
-            'YOUR_PUBLIC_KEY'    // EmailJS public key (User ID / Public key)
+            'tzTM10vHNrRvB96PL'    // EmailJS public key (User ID / Public key)
         )
             .then(() => {
                 alert('Az üzenet sikeresen elküldve!');
