@@ -5,6 +5,7 @@ import './styles/Product.css';
 
 function MediaCarousel({ media, title, description }) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [loadedMedia, setLoadedMedia] = useState(new Set());
 
     const prevMedia = () => {
         setCurrentIndex((prev) => (prev === 0 ? media.length - 1 : prev - 1));
@@ -17,16 +18,17 @@ function MediaCarousel({ media, title, description }) {
     const currentMedia = media[currentIndex];
     const showArrows = media.length > 1;
 
+    if (!loadedMedia.has(currentMedia.src)) {
+        setLoadedMedia(prev => new Set(prev).add(currentMedia.src));
+    }
+
     return (
         <div className="media-carousel-container">
             {title && <h2>{title}</h2>}
             <div className="carousel-container">
                 {showArrows && (
-                    <button className="nav-arrow left-arrow" onClick={prevMedia}>
-                        &lt;
-                    </button>
+                    <button className="nav-arrow left-arrow" onClick={prevMedia}>&lt;</button>
                 )}
-
                 {currentMedia.type === 'image' ? (
                     <img
                         src={currentMedia.src}
@@ -49,11 +51,8 @@ function MediaCarousel({ media, title, description }) {
                         style={{ cursor: 'pointer' }}
                     />
                 )}
-
                 {showArrows && (
-                    <button className="nav-arrow right-arrow" onClick={nextMedia}>
-                        &gt;
-                    </button>
+                    <button className="nav-arrow right-arrow" onClick={nextMedia}>&gt;</button>
                 )}
             </div>
             {description && <div className="media-description">{description}</div>}

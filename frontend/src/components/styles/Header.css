@@ -10,8 +10,9 @@
     max-height: 100px;
     height: 100px;
     box-shadow: 0 1px 8px rgba(50, 50, 50, 0.10);
-    position: relative;
+    position: sticky;
     z-index: 20;
+    top: 0;
     border-bottom: 1px solid var(--border);
 }
 
