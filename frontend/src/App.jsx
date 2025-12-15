@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Product from './components/Product';
 import Header from './components/Header';
 import Contact from './components/Contact';
+import Breadcrumb from './components/Breadcrumb';
 
 function AppContent() {
   const navigate = useNavigate();
@@ -20,13 +21,18 @@ function AppContent() {
     }
   }, [location, navigate]);
 
+  const showBreadcrumb = location.pathname !== '/';
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/product" element={<Product />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
+    <>
+      {showBreadcrumb && <Breadcrumb />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </>
   );
 }
 
@@ -40,3 +46,4 @@ function App() {
 }
 
 export default App;
+

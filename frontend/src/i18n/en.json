@@ -22,8 +22,11 @@
         "title": "Home",
         "shopNow": "Shop now!"
     },
-    "backToHome": {
-        "label": "Back to Home"
+    "breadcrumb": {
+        "home": "Home",
+        "about": "About Us",
+        "product": "Product",
+        "contact": "Contact"
     },
     "contact": {
         "contactTitle": "Contact",

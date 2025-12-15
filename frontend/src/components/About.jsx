@@ -6,8 +6,7 @@ function About() {
     const { t } = useTranslation();
 
     return (
-        <section
-            className="about-hero"
+        <div className='about'
             style={{ backgroundImage: `url(${about})` }}
         >
             <div className="about-overlay">
@@ -16,7 +15,7 @@ function About() {
                     <p className="about-text">{t('about.description')}</p>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }
 

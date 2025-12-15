@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 import './styles/Contact.css';
 
 function Contact() {
@@ -7,26 +8,59 @@ function Contact() {
     const faqs = t('contact.faqs', { returnObjects: true });
     const [openFaq, setOpenFaq] = useState(null);
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            'YOUR_SERVICE_ID',   // EmailJS Service ID
+            'template_gvmxi3m',  // EmailJS Template ID (amit a képernyőképen látsz)
+            e.target,
+            'YOUR_PUBLIC_KEY'    // EmailJS public key (User ID / Public key)
+        )
+            .then(() => {
+                alert('Az üzenet sikeresen elküldve!');
+                e.target.reset();
+            })
+            .catch((error) => {
+                alert('Hiba történt küldés közben: ' + error.text);
+            });
+    };
+
     return (
         <div className="contact-wrapper">
-            {/* Bal oldali infó */}
             <div className="contact-info">
                 <h2>{t('contact.contactTitle')}</h2>
-                <p><strong>{t('contact.emailLabel')}:</strong> <a href={`mailto:${t('contact.emailValue')}`}>{t('contact.emailValue')}</a></p>
+                <p>
+                    <strong>{t('contact.emailLabel')}:</strong>{' '}
+                    <a href={`mailto:${t('contact.emailValue')}`}>{t('contact.emailValue')}</a>
+                </p>
             </div>
 
-            {/* Középső kérdésfeltövő form */}
             <div className="contact-formbox">
                 <h2>{t('contact.questionTitle')}</h2>
-                <form className="contact-form">
-                    <input type="text" name="name" placeholder={t('contact.namePlaceholder')} required />
-                    <input type="email" name="email" placeholder={t('contact.emailPlaceholder')} required />
-                    <textarea name="message" placeholder={t('contact.messagePlaceholder')} rows={6} required />
+                <form className="contact-form" onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder={t('contact.namePlaceholder')}
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder={t('contact.emailPlaceholder')}
+                        required
+                    />
+                    <textarea
+                        name="message"
+                        placeholder={t('contact.messagePlaceholder')}
+                        rows={6}
+                        required
+                    />
                     <button type="submit">{t('contact.sendButton')}</button>
                 </form>
             </div>
 
-            {/* Jobb oldali GYIK, lenyitható */}
             <div className="contact-faq">
                 <h2>{t('contact.faqTitle')}</h2>
                 <div className="faq-list">
@@ -50,4 +84,5 @@ function Contact() {
 }
 
 export default Contact;
+
 

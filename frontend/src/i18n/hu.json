@@ -18,6 +18,12 @@
         "product": "Termékeink",
         "contact": "Elérhetőségek"
     },
+    "breadcrumb": {
+        "home": "Főoldal",
+        "about": "Rólunk",
+        "product": "Termékek",
+        "contact": "Elérhetőségek"
+    },
     "home": {
         "title": "Főoldal",
         "shopNow": "Vásároljon itt!"
