@@ -12,10 +12,10 @@ function Contact() {
         e.preventDefault();
 
         emailjs.sendForm(
-            'service_3kvvun5',
-            'template_gvmxi3m',
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
             e.target,
-            'tzTM10vHNrRvB96PL'
+            import.meta.env.VITE_EMAILJS_USER_ID
         )
             .then(() => {
                 alert('Az üzenet sikeresen elküldve!');
