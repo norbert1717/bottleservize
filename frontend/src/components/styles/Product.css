@@ -134,6 +134,8 @@ body {
     right: 12px;
 }
 
+/* Mobil nézet */
+
 @media (max-width: 768px) {
     .product-wrapper {
         grid-template-columns: 1fr;

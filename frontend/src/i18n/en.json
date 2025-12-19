@@ -5,13 +5,13 @@
     },
     "product": {
         "title": "Product",
-        "productAzulLink": "More information and purchase here",
-        "productDictatorLink": "More information and purchase here",
-        "productBlancoLink": "More information and purchase here",
-        "productBelugaPearLink": "More information and purchase here",
-        "productAbuleoLink": "More information and purchase here",
-        "productUnicumOrangeLink": "More information and purchase here",
-        "productTequilaBlancoLink": "More information and purchase here"
+        "productAzulLink": "More information and purchase here!",
+        "productDictatorLink": "More information and purchase here!",
+        "productBlancoLink": "More information and purchase here!",
+        "productBelugaPearLink": "More information and purchase here!",
+        "productAbuleoLink": "More information and purchase here!",
+        "productUnicumOrangeLink": "More information and purchase here!",
+        "productTequilaBlancoLink": "More information and purchase here!"
     },
     "header": {
         "about": "About Us",

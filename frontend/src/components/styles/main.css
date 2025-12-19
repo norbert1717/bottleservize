@@ -56,7 +56,6 @@ a:focus {
     text-decoration: underline;
 }
 
-/* Egységes gombstílus – minden gomb és a saját .button is */
 .button,
 button,
 input[type=submit] {

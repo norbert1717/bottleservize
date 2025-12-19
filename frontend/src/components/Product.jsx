@@ -71,12 +71,6 @@ function Product() {
                         href={product.meskaUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{
-                            color: '#62b0b8',
-                            fontWeight: 'bold',
-                            fontSize: '1.1rem',
-                            textDecoration: 'underline',
-                        }}
                     >
                         {t(product.i18nLinkKey)}
                     </a>
