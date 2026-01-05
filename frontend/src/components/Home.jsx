@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import promoVideo from '../assets/videos/promoVideo.mp4';
+import promoVideo2 from '../assets/videos/promoVideo2.mp4';
 import './styles/Home.css';
 
 function Home() {
@@ -22,7 +22,7 @@ function Home() {
             <div className="home-content">
                 <video
                     ref={videoRef}
-                    src={promoVideo}
+                    src={promoVideo2}
                     className="home-bg-video"
                     muted
                     loop
