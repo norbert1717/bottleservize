@@ -45,8 +45,8 @@ export const products = [
     },
     {
         id: 'azul',
-        name: 'Kaa Tequila',
-        meskaUrl: 'https://www.meska.hu/p5662763-kaa-tequila-kep',
+        name: 'Clase Azul Tequila',
+        meskaUrl: 'https://www.meska.hu/p5662757-clase-azul-reposado-kep',
         media: [
             { type: 'image', src: azul1 },
             { type: 'image', src: azul2 },

@@ -106,13 +106,7 @@
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
-        order: 1;
-    }
-
-    .site-logo-wrapper {
-        order: 2;
-        flex: 0;
-        text-align: center;
+        order: -1;
     }
 
     .site-logo {

@@ -1,7 +1,6 @@
 import { useNavigate, Link } from 'react-router-dom';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useTranslation } from 'react-i18next';
-import logo2 from '../assets/images/logo2.jpg';
 import { FaInstagram } from 'react-icons/fa';
 import './styles/Header.css';
 import { useState } from 'react';
@@ -14,8 +13,9 @@ function Header() {
     return (
         <header className="header">
             <Link to="/">
-                <img src={logo2} alt="Logó" className="site-logo" />
+                <img src="/bSL.jpg" alt="BottleServiZe Logo" className="site-logo" />
             </Link>
+
             <a
                 href="https://www.instagram.com/bottleservize?igsh=NWVmMXYyc3lzdndx"
                 target="_blank"

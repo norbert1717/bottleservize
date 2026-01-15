@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import './styles/About.css';
-import about from '../assets/images/about.jpg';
 
 function About() {
     const { t } = useTranslation();
 
     return (
-        <div className='about'
-            style={{ backgroundImage: `url(${about})` }}
+        <div
+            className='about'
+            style={{
+                backgroundImage: `url('/images/about.jpg')`
+            }}
         >
             <div className="about-overlay">
                 <div className="about-content">

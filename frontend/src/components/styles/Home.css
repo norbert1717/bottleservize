@@ -9,40 +9,53 @@ body {
 
 .home-root {
     min-height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
-    align-items: center;
-    justify-items: center;
-    background: var(--main-bg);
-    padding-top: 16px;
-    overflow: hidden;
+    position: relative;
 }
 
 .home-content {
-    width: 100vw;
-    height: calc(100vh - 100px);
-    max-width: none;
-    aspect-ratio: unset;
-    border-radius: 0;
-    box-shadow: none;
-    margin: 0;
-    position: fixed;
-    top: 100px;
-    left: 0;
-    z-index: 1;
-    overflow: hidden;
+    position: relative !important;
+    width: 100vw !important;
+    height: calc(100vh - 100px) !important;
+    overflow: hidden !important;
 }
 
-.home-bg-video {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 0;
+.home-bg-iframe {
+    position: fixed !important;
+    top: 100px !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: calc(100vh - 100px) !important;
+    border: none !important;
+    z-index: -1 !important;
+}
+
+/* Mmobil nézet */
+@media (max-width: 768px) {
+    .home-bg-iframe {
+        top: 60px !important;
+        height: calc(100vh - 60px) !important;
+    }
+
+    .home-content {
+        height: calc(100vh - 60px);
+        top: 60px;
+    }
+
+    .home-root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 16px;
+        padding-bottom: 0;
+        overflow: hidden;
+    }
+
+    .home-side-products,
+    .home-side-left,
+    .home-side-right {
+        display: none;
+    }
 }
 
 .home-shop-button {
@@ -63,34 +76,11 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: none;
     display: block;
+    z-index: 10;
 }
 
 .home-shop-button:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 1);
     transform: translateX(-50%) translateY(-2px);
-}
-
-/* Mobil nézet */
-@media (max-width: 768px) {
-    .home-root {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 16px;
-        padding-bottom: 0;
-        overflow: hidden;
-    }
-
-    .home-side-products,
-    .home-side-left,
-    .home-side-right {
-        display: none;
-    }
-
-    .home-content {
-        height: calc(100vh - 60px);
-        top: 60px;
-    }
 }
